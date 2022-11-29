@@ -5,7 +5,7 @@ st.title('WalMart USA App')
 
 DATA_URL = 'https://raw.githubusercontent.com/jeaggo/tc3068/master/Superstore.csv'
 
-#@st.cache
+@st.cache
 def load_data():
     data = pd.read_csv(DATA_URL)
     return data
