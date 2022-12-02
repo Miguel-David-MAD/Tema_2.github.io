@@ -25,7 +25,7 @@ df = filter_data(data, 'Ship Mode', ship_mode)
 category = st.selectbox('Control Category', data['Category'].unique())
 df = filter_data(df, 'Category', category)
 
-discount = st.slider('Control Discount', data['Discount'].min(), data['Discount'].max())
+discount = st.slider('Control Discount', data['Discount'].min(), data['Discount'].max(), float(data['Discount'][0]))
 df = filter_data(df, 'Discount', discount)
 
 st.dataframe(df)
